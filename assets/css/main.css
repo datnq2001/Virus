@@ -133,10 +133,13 @@
     padding: 10px 40px;
 }
 .header__navbar-logo{
+    text-decoration: none;
     display: flex;
     align-items: center;
 }
 .header__navbar-logo-company{
+    text-decoration: none;
+    color: var(--white-color);
     font-size: 4rem;
     font-weight: 700;
 }
@@ -249,9 +252,6 @@
     font-size: 20px;
     margin-top: 100px;
 }
-.app__container{
-    
-}
 .background--black{
     background-color: var(--black-color);
 }
@@ -276,6 +276,9 @@
     display: block;
     font-size: 2.4rem;
 }
+.container__link:hover{
+    color: rgb(251, 10, 239);
+}
 .container__link-icon{
     margin-left: 15px;
 }
@@ -283,14 +286,13 @@
     padding-bottom: 0;
 }
 .articles-section__header{
-    margin-bottom: 50px;
+    margin-bottom: 20px;
 }
 .article {
     position: relative;
     width: 100%;
     background-color: #1d1d1d;
     display: block;
-    text-decoration: none;
     min-height: 430px;
 }
 .article-container{
@@ -317,7 +319,7 @@
     display: none;
 }
 .article:hover .article__heading{
-    text-decoration: underline;
+    background-size: 100% 3px;
 }
 .article:hover .article-border{
     display: block;
@@ -342,11 +344,15 @@
     background-color: #1d1d1d;
 }
 .article__heading{
-    width: 100%;
+    background-image: linear-gradient(45deg, rgb(247, 30, 247), rgb(25, 188, 252));
+    background-size: 0% 3px;
+    background-repeat: no-repeat;
+    background-position: left bottom;
+    transition: background-size 300ms ease;
     font-size: 2.2rem;
     line-height: 30px;
-    height: 60px;
-    overflow: hidden;
+    height: 65px;
+    overflow: hidden; 
     display: -webkit-box;
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 2;
@@ -361,7 +367,6 @@
     display: -webkit-box;
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 4;
-    text-decoration: none !important;
     color: var(--white-color)
 }
 /* .exhibition-section::before{
@@ -406,9 +411,10 @@
 }
 .exhibition:hover .exhibition__image{
     border-radius: 0;
+    transform: scale(1.2);
 }
 .exhibition-section__body{
-    margin: 50px 0;
+    margin: 70px 0;
 }
 .exhibition-container{
     display: flex;
@@ -423,13 +429,19 @@
     left: 0;
     border-radius: 6px;
 }
-.exhibition__image{
+.exhibition__image-container{
     width: 50%;
+    height: 100%;
+    overflow: hidden;
+}
+.exhibition__image{
+    width: 100%;
     height: 100%;
     object-fit: cover;
     object-position: center;
     border-top-right-radius: 6px;
     border-bottom-right-radius: 10px;
+    transition: all linear .2s;
 }
 .exhibition-info{
     display: inline-block;
@@ -449,9 +461,6 @@
     font-size: 2.8rem;
     line-height: 32px;
     font-weight: 500;
-}
-.exhibition__time{
-    
 }
 .exhibition__type{
     font-size: 1.7rem;
@@ -511,12 +520,24 @@
     z-index: 0;
     display: none;
     border-radius: 6px;
+    animation: fadeIn ease-in .2s;
+    transition: all linear .2s;
+}
+@keyframes fadeIn {
+    from{
+        opacity: 50%;
+    }
+    to{
+        opacity: 100%;
+    }
+    
 }
 .banner{
     margin: 130px 0;
     display: flex;
     background-color: var(--white-color);
     border-radius: 10px;
+    border-left: 20px solid #ffe800;
 }
 .banner-info{
     background-color: transparent;
@@ -524,18 +545,21 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 30px 30px;
+    padding: 30px 60px;
     margin: auto;
 }
 .banner__heading{
     flex: 1;
-    font-size: 4.4rem;
-    line-height: 50px;
-    font-weight: 600;
+    padding-left: 30px;
+    padding-right: 30px;
+    font-size: 7.0rem;
+    line-height: 90px;
+    font-weight: 700;
+    letter-spacing: 10px;
 }
 .banner__content{
     flex: 1;
-    padding-bottom: 30px;
+    padding: 0 30px 30px 0;
 }
 .banner__description{
     font-size: 2.4rem;
@@ -580,6 +604,8 @@
     margin-left: 10px;
 }
 .explore-section{
+    padding-top: 60px;
+    padding-bottom: 80px;
     height: 900px;
 }
 .grid-container--body{
@@ -674,12 +700,170 @@
 }
 .navigation-section{
     padding-top: 30px;
-    height: 1130px;
-}
-.navigation-section{
-    padding-top: 30px;
-    height: 1100px;
+    height: 850px;
 }
 .navigation-section__heading{
     margin: 40px 0 0 0;
+}
+.grid__column{
+    width: calc(100% + 30px);
+    overflow-y: scroll;
+    height: 870px;
+    margin-left: -30px;
+    position: relative;
+}
+.grid__column::-webkit-scrollbar {
+    width: 12px; /* Độ rộng của thanh cuộn */
+}
+
+.grid__column::-webkit-scrollbar-track {
+    background: transparent; /* Màu nền của thanh cuộn */
+}
+
+.grid__column::-webkit-scrollbar-thumb {
+    background-color: #888; /* Màu của thanh cuộn */
+    border-radius: 6px; /* Độ cong của viền thanh cuộn */
+    border: 3px solid #fff; /* Viền của thanh cuộn */
+}
+.wrapper{
+    width: 100%;
+    height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.container{
+    height: 600px;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: start;
+}
+.card{
+    overflow: hidden;
+    position: relative;
+    background-color: white;
+    width: 120px;
+    border-radius: 0.75rem;
+    background-size: cover;
+    background-position:center;
+    cursor: pointer;
+    /* overflow: hidden; */
+    border-radius: 2rem;
+    margin: 0 10px;
+    display: flex;
+    align-items: flex-end;
+    transition: .6s cubic-bezier(.28, -0.03, 0, 0.99);
+    box-shadow: 0px 10px 30px -5px rgba(0, 0 , 0, 0.8);
+    border: 1px solid var(--white-color);
+}
+
+.card > .row{
+    display: flex;
+    flex-wrap: nowrap;
+    position: absolute;
+}
+.card > .row > .icon{
+    background: #223;
+    color: white;
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 15px;
+    margin-left: 20.5px;
+    font-size: 3.0rem;
+}
+.card > .row > .description{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    overflow: hidden;
+    height: 150px;
+    width: 850px;
+    text-align: justify;
+    opacity: 0;
+    transform: translateY(150px);
+    transition-delay: .1s;
+    transition: all .5s ease;
+    margin-left: 10px;
+}
+.card::before{
+    content: "";
+    display: block;
+    width: 1020px;
+    height: 170px;
+    background-color: #ccccccd4;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: none;
+    transform: translateY(170px);
+    transition-delay: 1s;
+    transition: all .5s ease;
+    border-bottom-left-radius: 2rem;
+    border-bottom-right-radius: 2rem;
+}
+.navigation__link{
+    text-decoration: none;
+}
+.navigation__link:hover .description-title{
+    background-size: 100% 5px;
+}
+.description p {
+    color: rgb(52, 52, 52);
+    padding: 0;
+    font-size: 2.0rem;
+    line-height: 28px;
+    margin-top: 5px;
+    margin-bottom: 30px;
+    
+}
+.description h4{
+    min-width: 180px;
+    max-width: 500px;
+    background-image: linear-gradient(45deg, rgb(247, 30, 247), rgb(20, 114, 254));
+    background-size: 0% 5px;
+    background-repeat: no-repeat;
+    background-position: left bottom;
+    transition: background-size 300ms ease;
+    font-size: 3.2rem;
+    line-height: 50px;
+    margin: 0;
+    text-transform: uppercase;
+    color: #223;
+}
+input{
+    display: none;
+}
+input:checked + label {
+    width: 1020px;
+}
+input:checked + label.card::before {
+    display: block;
+    transform: translateY(0px)
+}
+input:checked + label .description{
+    opacity: 1 !important;
+    transform: translateY(0px) !important;
+}
+.card[for="c1"]{
+    background-image: url('https://cdn.sculptform.com.au/app/uploads/2019/03/22105741/MECC-Masthead-01.jpg');
+}
+.card[for="c2"]{
+    background-image: url('https://media.wnyc.org/i/1500/1122/l/80/1/6_b4DJNeV.jpg');
+}
+.card[for="c3"]{
+    background-image: url('https://www.thisisathens.org/sites/default/files/styles/paragraph_slideshow_landscape/public/2021-07/20210714-TGR-NationalGallery-0030.jpg?itok=qgC0EIwr');
+}
+.card[for="c4"]{
+    background-image: url('https://s3.ap-southeast-2.amazonaws.com/cdn.greekherald.com.au/wp-content/uploads/2021/12/16095316/Untitled-design-94.jpg');
+}
+.footer-content{
+    font-size: 1.4rem;
+    text-align: center;
+    margin: 0;
+    line-height: 50px;
 }

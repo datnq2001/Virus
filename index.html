@@ -15,10 +15,10 @@
         <header class="header">
             <div class="grid">
                 <nav class="header__navbar">
-                    <div class="header__navbar-logo">
+                    <a href="#" class="header__navbar-logo">
                         <img src="assets/images/logo.png" alt="" class="header__navbar-logo-img">
                         <span class="header__navbar-logo-company">TRENDALL</span>
-                    </div>
+                    </a>
                     <ul class="header__navbar-list">
                         <li class="header__navbar-item">
                             <a href="#" class="header__navbar-link header__navbar-link--primary">HOME</a>
@@ -109,7 +109,7 @@
                             <div class="articles-container">
                                 <div class="grid__row--no-wrap">
                                     <div class="grid__column-four">
-                                        <a href="" class="article">
+                                        <a href="#" class="article">
                                             <div class="article-border"></div>
                                             <div class="article-container">
                                                 <div class="article__image-container">
@@ -224,7 +224,9 @@
                                                         <a href="#" class="exhibition__link background-link--yellow">Book Now</a>
                                                     </div>
                                                 </div>
-                                                <img src="assets\images\exhibition1.jpg" alt="" class="exhibition__image">
+                                                <div class="exhibition__image-container">
+                                                    <img src="assets\images\exhibition1.jpg" alt="" class="exhibition__image">
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -246,7 +248,9 @@
                                                         <a href="#" class="exhibition__link background-link--blue">Book Now</a>
                                                     </div>
                                                 </div>
-                                                <img src="assets\images\exhibition2.jpg" alt="" class="exhibition__image">
+                                                <div class="exhibition__image-container">
+                                                    <img src="assets\images\exhibition2.jpg" alt="" class="exhibition__image">
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -259,7 +263,7 @@
             <div class="grid-container">
                 <div class="banner" id="search">
                     <div class="banner-info">
-                        <div class="banner__heading">SEARCH COLLECTION ONLINE</div>
+                        <div class="banner__heading">SEARCH <br/> COLLECTION <br/> ONLINE</div>
                         <div class="banner__content">
                             <div class="banner__description">Immerse yourself in our ancient world and uncover new discoveries about the civilizations, arts, and histories of the Mediterranean region.</div>
                             <div class="banner__button">
@@ -311,7 +315,7 @@
             <div class="grid-container">
                 <div class="banner" id="sign-in">
                     <div class="banner-info">
-                        <div class="banner__heading">BECOME OUR MEMBER</div>
+                        <div class="banner__heading">BECOME <br/> OUR MEMBER</div>
                         <div class="banner__content">
                             <div class="banner__description">"Join us today and unlock exclusive benefits! Gain access to premium content, special events, and insider updates. Become a valued member of our community and support our mission. Join now!"</div>
                             <div class="banner__button">
@@ -336,7 +340,7 @@
                         </div>
                         <div class="exhibition-section__body">
                             <div class="grid-container grid-container--body">
-                                <div class="grid__row">
+                                <!-- <div class="grid__column">
                                     <div class="grid__column-two">
                                         <a href="https://www.latrobe.edu.au/research/centres/trendall" class="navigation-link">
                                             <img src="assets\images\about-us.jpg" alt="" class="navigation-image">
@@ -369,6 +373,76 @@
                                             </h3>
                                         </a>
                                     </div>
+                                </div> -->
+                                <div class="wrapper">
+                                    <div class="container">
+                                        <input type="radio" name="slide" id="c1" checked>
+                                        <label for="c1" class="card">
+                                            <div class="row">
+                                                <div class="icon">1</div>
+                                                <div class="description">
+                                                    <a href="#aboutus" class="navigation__link">
+                                                        <h4 class="description-title">About us</h4>
+                                                        <p>At The Trendall Research Centre, we specialize in Ancient Mediterranean studies, 
+                                                            emphasizing South Italy and Sicily's archaeology during the Classical era. Join 
+                                                            us in exploring and celebrating the rich cultural heritage of Greece and Rome.
+                                                        </p>   
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </label>
+                                        <input type="radio" name="slide" id="c2">
+                                        <label for="c2" class="card">
+                                            <div class="row">
+                                                <div class="icon">2</div>
+                                                <div class="description">
+                                                    <a href="#" class="navigation__link">
+
+                                                        <h4 class="description-title">Searching tools</h4>
+                                                        <p>
+                                                            Discover with ease at The Trendall Research Centre with our powerful searching tool. 
+                                                            Effortlessly navigate through our extensive library and archive to uncover valuable 
+                                                            resources in the field of Ancient Mediterranean studies, tailored to your research needs.
+                                                        </p>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </label>
+                                        <input type="radio" name="slide" id="c3">
+                                        <label for="c3" class="card">
+                                            <div class="row">
+                                                <div class="icon">3</div>
+                                                <div class="description">
+                                                    <a href="#" class="navigation__link">
+
+                                                        <h4 class="description-title">Gallery</h4>
+                                                        <p>
+                                                            Dive into the Gallery Treasure Trove on The Trendall Research Centre's website, where you'll 
+                                                            discover a curated collection of captivating artifacts and visual delights from the Ancient 
+                                                            Mediterranean. Explore the beauty and significance of Greek and Roman art in a click.
+                                                        </p>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </label>
+                                        <input type="radio" name="slide" id="c4">
+                                        <label for="c4" class="card">
+                                            <div class="row">
+                                                <div class="icon">4</div>
+                                                <div class="description">
+                                                    <a href="#" class="navigation__link">
+                                                        <h4 class="description-title">Resources</h4>
+                                                        <p>
+                                                            Discover abundant resources on The Trendall Research Centre's website, offering essential 
+                                                            materials for exploring Ancient Mediterranean studies. Dive into a curated collection of 
+                                                            articles and documents to enrich your understanding of Greek and Roman history and culture.
+                                                        </p>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </label>
+                                        
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -377,7 +451,7 @@
             </div>
         </div>
         <footer>
-
+            <p class="footer-content">&copy; TRENDALL CENTRE located in La Trobe University</p>
         </footer>
     </div>
 </body>
